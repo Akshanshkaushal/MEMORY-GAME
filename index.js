@@ -80,11 +80,6 @@ $(".bt").click(function () {
 })
 
 
-function soundplay(userInputColor) {
-    var audio = new Audio("sounds/" + userInputColor + ".mp3");
-    audio.play();
-}
-
 function recordt() {
 
     let prev = localStorage.getItem("score");
@@ -124,8 +119,6 @@ function checkAnswer(currentlevel) {
             
         }
     } else {
-        
-        soundplay("wrong");
         $("body").css("background-color", "red");
         setTimeout(function () { $("body").css("background-color", "white"); }, 300);
         recordt();
